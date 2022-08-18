@@ -1,0 +1,134 @@
+.intro{
+  padding:8rem 0 1rem 0;
+}
+
+header{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-green{
+  background-color: #7D9D9C;
+}
+
+.text-green{
+  color:#7D9D9C
+}
+
+.textFansy{
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  display: inline-block;
+}
+
+.textRegular{
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+}
+
+.textChinese{
+  font-family: 'Long Cang', cursive;
+  display: inline-block;
+}
+
+.intro .textImportant{
+  color: #F0EBE3;
+}
+
+.intro .textCommon{
+  color: #E4DCCF;
+}
+
+.navBg{
+  background-color: #a0b8b7;
+}
+
+nav .title{
+  color: #F0EBE3;
+}
+
+
+#basic-nav-dropdown{
+  color: #F0EBE3;
+}
+
+nav .downTitle{
+  color:#a0b8b7;
+}
+
+img{
+  padding: 5%;
+}
+
+.center{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.left{
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+}
+
+.textBrown{
+  color:#413F42
+}
+
+.blockSpace{
+  padding: 2rem;
+}
+
+.zoom {
+    
+  transition: transform .2s; 
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+h2{
+  padding: 0.5rem
+}
+
+h3{
+  padding:0 0.5rem
+}
+
+.arrowIcon{
+  width: 30px;
+  padding:0;
+}
+
+.explore{
+  padding-left: 5%;
+}
+
+.movieRecommend{
+  display:inline-block;
+  width: 90%;
+}
+
+.input{
+  padding: 0.5rem 0;
+}
+
+.bg-light{
+  background-color:#F0EBE3;
+}
+
+.display-inline{
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.message{
+  color:#FF9F29;
+  font-style: italic;
+}
