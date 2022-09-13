@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -9,8 +8,8 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import MovieReview from "./MovieReview"
 import Submit from "./Submit"
-
-
+import MotionDiv from "../MotionDiv";
+    
 const client = axios.create({
     baseURL: "http://localhost:5000/movieRecommend" 
   });
@@ -19,12 +18,14 @@ const client = axios.create({
 function MovieRecommend(){
 
     const [submit, setSubmit] = useState(false);
+    const [render, setRender] = useState(false);
     const [message,setMessage] =useState('');
 
     const [movieRecommend, setMovieRecommend] = useState({});
 
     function handleChange(change){
         setSubmit(false);
+        setMessage('')
         switch(change.name) {
             case "title":
                 setMovieRecommend({...movieRecommend, title:change.value})
@@ -47,8 +48,9 @@ function MovieRecommend(){
             }else{
                 client.post('', movieRecommend)
                 .then(()=> {
-                    setSubmit(true);
                     setMessage("Succesfully submitted!")
+                    setSubmit(true);
+                    setRender(prevRender => !prevRender)
                 })
                 .catch(() => {
                     setMessage("Oops! Something went wrong, please try again!");
@@ -59,12 +61,14 @@ function MovieRecommend(){
 
 
     return(
-        <Container className='blockSpace center'>
+        <div className="pb-4">
+        <MotionDiv content={
+            <Container className='blockSpace center-item py-5'>
         <Row>
         <Col xl={6} s={12}>
-        <div className="movieRecommend">
+        <div className="movieRecommend ">
             <h4 className="textFansy textBrown display-inline">Share your favorites with me!</h4>
-            <h6 className="textFansy textBrown display-inline">It's gonna be here soon→</h6>
+            <h6 className="textFansy textBrown display-inline px-3">It's gonna be displayed here soon!</h6>
             <form onSubmit={handleSubmit}>
             <InputGroup className="input">
             <InputGroup.Text id="basic-addon1">Movie Title *</InputGroup.Text>
@@ -95,17 +99,19 @@ function MovieRecommend(){
             onChange={event => handleChange(event.target)}
             />
             </InputGroup>
-            <Submit submit = {submit} message = {message}/>
             <Button variant="outline-secondary" type="submit">Submit</Button>
+            <Submit message = {message}/>
             </form>
         </div>
         </Col>
         <Col xl={6} s={12}>
         <h4 className="textFansy boldtextBrown">Newest Shares:</h4>
-        <MovieReview key = {submit}/>
+        <MovieReview key = {submit} render = {render} submit={submit}/>
         </Col>
         </Row>
         </Container>
+        }/>
+        </div>
         
     )
 }

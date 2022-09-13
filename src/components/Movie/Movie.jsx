@@ -4,7 +4,7 @@ import MyMovies from "./MyMovies"
 
 function Movies(){
     return(
-        <div className="bg-light">
+        <div className="p-5">
         <MyMovies/>
         <MovieRecommend/>
         </div>

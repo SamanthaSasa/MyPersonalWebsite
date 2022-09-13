@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Review from "./Review"
 
 const client = axios.create({
@@ -13,11 +13,11 @@ function MovieReview(){
   
     const [post, setPost] = useState([]);
    
-    useEffect(() => {
-        client.get().then((response) => {
-          setPost(response.data);
-        });
-      }, []);
+
+    client.get().then((response) => {
+      setPost(response.data);
+    });
+     
 
 
 
