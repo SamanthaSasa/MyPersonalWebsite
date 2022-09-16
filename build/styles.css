@@ -1,0 +1,234 @@
+.intro{
+  padding:8rem 0 1rem 0;
+}
+
+.center-item{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-item{
+  text-align: right;
+  justify-content: right;
+  align-items: right;
+}
+
+.center-div{
+  width: 430px;
+  margin: 0 auto;
+}
+
+
+.bg-green{
+  background-color: #7D9D9C;
+}
+
+.text-green{
+  color:#a0b5c7
+}
+
+.keyword{
+  color:#8da0b0e4;
+  font-weight:1200;
+}
+
+
+.textFansy{
+  font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.textRegular{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.textChinese{
+  font-family: 'Long Cang', cursive;
+  display: inline-block;
+}
+
+.intro{
+  background-image:url("https://i.postimg.cc/XqmtR04D/41040026.jpg");
+  background-size: cover
+}
+
+.textImportant{
+  color: #F0EBE3;
+  display: inline-block;
+}
+
+.textCommon{
+  color: #E4DCCF;
+  display: inline-block;
+}
+
+.navBg{
+  background-color: #7D9D9C;
+}
+
+nav .title{
+  color: #F0EBE3;
+}
+
+
+.poster{
+  padding: 5%;
+}
+
+
+.textBrown{
+  color:#413F42
+}
+
+
+.zoom-poster {
+  transition: transform .5s; 
+}
+
+.zoom-poster:hover {
+  transform: scale(1.1);
+}
+
+.zoom-project{
+  transition: transform 0.5s; 
+}
+
+.zoom-project:hover {
+  transform: scale(1.2);
+}
+
+h2{
+  padding: 0.5rem
+}
+
+h3{
+  padding:0 0.5rem
+}
+
+.arrowIcon{
+  width: 30px;
+  padding:0;
+}
+
+.explore{
+  padding-left: 5%;
+}
+
+.movieRecommend{
+  display:inline-block;
+  width: 90%;
+}
+
+.input{
+  padding: 0.5rem 0;
+}
+
+.bg-Light{
+  background-color:#eff1eeac;
+}
+
+.display-inline{
+  display: inline;
+}
+
+.display-inlineblock{
+  display: inline-block;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.message{
+  color:#FF9F29;
+  font-style: italic;
+}
+
+.textSerious{
+  font-family: 'EB Garamond', serif;
+}
+
+.textGrey{
+  color:#7F8487
+}
+
+.textBlue{
+  color:#398AB9
+}
+
+
+.carouselItem{
+  width:100%;
+}
+
+.carousel {
+  width:100%;
+  margin: auto;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  
+}
+
+.top{
+  vertical-align: top
+}
+
+.middle{
+  vertical-align: middle
+}
+
+
+
+.Folio_Card {
+
+  margin-bottom: 30px;
+  height: 450px;
+
+}
+
+
+.txt {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  font-size: 2.5vw;
+  vertical-align: middle;
+  text-align: left;
+  font-family: 'EB Garamond', serif;
+  
+
+}
+
+@media (max-width: 960px) {
+  .Folio_Card {
+    height: 300px;
+  }
+
+  .txt {
+    font-size: 3vw;
+  }
+}
+
+
+.icon{
+  font-size:2rem;
+  display:inline-block;
+  margin:3%;
+  color:#7F8487
+}
+
+.icon:hover {
+  color:#80a5a4;
+}
+
+.underline:hover{
+  text-decoration: underline;
+}
