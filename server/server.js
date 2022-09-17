@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 require("dotenv").config({ path: "./config.env" });
 const Db = process.env.ATLAS_URI;
 const port = process.env.PORT;
-app.use(cors());
+const helmet = require('helmet');
+app.use(helmet());
 app.use(express.json());
 const routes = require("./routes")
 
@@ -16,4 +17,7 @@ app.listen(port, () => {
 	console.log("Server has started!")
 })
 
-mongoose.connect(Db, { useNewUrlParser: true })
+mongoose.connect(Db, { useNewUrlParser: true },function(err) {
+    if (err)
+        return console.error(err);
+})

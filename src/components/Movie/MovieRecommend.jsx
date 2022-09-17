@@ -11,7 +11,7 @@ import Submit from "./Submit"
 import MotionDiv from "../MotionDiv";
     
 const client = axios.create({
-    baseURL: "http://localhost:5000/movieRecommend" 
+    baseURL: "/movieRecommend" 
   });
 
 
